@@ -135,17 +135,50 @@ let testSheep = AnimalTestUser('Cottonball', {
 console.log(testSheep);
 console.log(testSheep.extraArgs[0]['is single']); */
 
-function AnimalCreator(username, species, tagline, noises) {
+/* function AnimalCreator(username, species, tagline, noises, friends) {
   let animal = {
     username: username,
     species: species,
     tagline: tagline,
-    noises: noises
+    noises: noises,
+    friends: friends
   };
 
   return animal;
 }
 
-let max = AnimalCreator('max', 'giraffe', 'I\'m pretty tall', 'Girrraaaffff!');
+function addFriend(animal, friend) {
+  animal.friends.push(friend.username);
+  friend.friends.push(animal.username);
+}
+
+let max = AnimalCreator('max', 'giraffe', 'I\'m pretty tall', ['Girrraaaffff!', 'Sniff', 'Grunt'], []);
+let stu = AnimalCreator('stu', 'donkey', 'I can be a real ass sometimes', ['heeehaw', 'sniff', 'snort', 'chew'], []);
+
+addFriend(stu, max);
 
 console.log('max', max);
+console.log('stu', stu); */
+
+/*******************
+ ** Nested Objects **
+ *******************/
+
+// with bracket notation
+
+/* let box = {};
+box["innerBox"] = {};
+box["innerBox"].full = true;
+
+//  {
+//    innerbox: {
+//      full: true
+//    }
+//  }
+
+box.innerBox2 = {};
+let otherBox = 'innerBox2';
+
+box[otherBox].full = false;
+
+console.log(box); */
